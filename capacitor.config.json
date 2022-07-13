@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "poke-app",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
