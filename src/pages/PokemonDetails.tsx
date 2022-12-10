@@ -60,7 +60,7 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ match }) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [match.params.id]);
 
 
 
