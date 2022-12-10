@@ -21,6 +21,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import PokemonDetails from './pages/PokemonDetails';
 
 setupIonicReact();
 
@@ -28,12 +29,12 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
+        <Route exact path="/pokemons" component={Home}></Route>
+        <Route exact path="/pokemons/:id" component={PokemonDetails}></Route>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/pokemons" />
         </Route>
+        <Route render={() => <Redirect to="/" />} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
